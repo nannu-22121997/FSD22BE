@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Form - Method - GET">
+    <title>Form - Method - GET</title>
+</head>
+<body>
+    <h1>Form - Method - GET</h1>
+    <!--
+        Before clicking sumit button, URL: http://127.0.0.1:5500/HTML/15.Forms/formGet.html
+        After clicking submit button, URL: http://127.0.0.1:5500/HTML/15.Forms/result.html?firstName=Naveen&lastName=Kumar
+
+        ?firstName=Naveen&lastName=Kumar
+    -->
+    <form action="result.html" method="get">
+        <p>
+     <label for="firstName">FirstName:</label>
+     <input type="text" name="firstName" placeholder="Enter First Name">
+     </p>
+     <p>
+        <label for="lastName">LastName:</label>
+        <input type="text" name="lastName" placeholder="Enter Last Name">
+     </p>
+     <input type="submit" value="submit">
+     <input type="reset" value="clear">
+    </form>
+</body>
+</html>

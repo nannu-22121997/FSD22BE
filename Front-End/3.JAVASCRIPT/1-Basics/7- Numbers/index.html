@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <meta name="Description" content="JavaScript - Numbers ">
+    <title>JavaScript - Numbers</title>
+    <script>
+        // Numbers - Whole number, decimal number
+        // 12, 12.5
+        let number = 12;
+        let number2 = 12.5;
+        console.log(number); //12
+        console.log(number2); //12.5
+        console.log(number + number2); // 24.5 (Number)
+          
+        // Number string => single or double quote
+        // Ex: 5 // Number
+        // Ex: "5" // String
+        // Ex: "Sabe" // String
+        let number3 = "25";
+        let number4 = "20";
+        console.log(number3 + number4); // 2520
+
+        console.log(number + number3); // 1225
+        
+        console.log(number + number2 + number3); // 12 + 12.5 + "25" => 24.525 (String)
+
+        console.log(number3 + number + number2); // "25" + 12 + 12.5 => 251212.5 (String)
+
+        // Arithmatic Operation => addition (+), subtraction (-), Multiplication (*), Division (/), modulo operation (%)
+        let numberOne = 25;
+        let numberTwo = 12;
+        
+        console.log(
+            "The addition of " + numberOne + " and " + numberTwo + " is: ",
+             numberOne + numberTwo
+             );
+        console.log(
+            "The subtraction of " + numberOne + " and " + numberTwo + " is: ",
+             numberOne - numberTwo
+             );
+        console.log(
+            "The multiplication of " + numberOne + " and " + numberTwo + " is: ",
+             numberOne * numberTwo
+             );
+        console.log(
+            "The division of " + numberOne + " and " + numberTwo + " is: ",
+             numberOne / numberTwo
+             );
+             console.log(
+            "The modulo operation of " + numberOne + " and " + numberTwo + " is: ",
+             numberOne % numberTwo
+             );
+
+             // Increment (++), Decrement (--)
+             // post and pre
+             // post => First, the value is printed, then the Increment or Decrement operation is performed
+             // pre => First, the Increment or Decrement operation is performed, then the value is printed
+             let number5 = 20;
+             console.log(++number5); // 21 // pre-Increment => number5 = number5 + 1 (Increment the given value by 1)
+             console.log(--number5); // 20 // pre-Decrememt => number5 = number5 - 1 (Decrement the given value by 1)
+             
+             console.log(number5++); // 20 // post-Increment => number5 = number5 + 1 // 21
+             console.log(--number5); // 20
+
+             // Short-hand notation (Aritmetic operation => +=, -=, *=, /=)
+             let number6 = 10;
+            // number6 = number6 + 10; // number6 += 10
+            console.log((number6 += 10)); // number6 = 10 // number6 = number6 + 10 => 10 + 10 => 20
+            console.log((number6 -= 10)); // number6 = 20 // number6 = number6 - 10 => 20 - 10 => 10
+            console.log((number6 *= 10)); // number6 = 10 // number6 = number6 * 10 => 10 * 10 => 100
+            console.log((number6 /= 10)); // number6 = 100 // number6 = number6 + 10 => 100 / 10 =>10
+             </script>
+       </head>
+<body>
+    <h2>JavaScript - Numbers</h2>
+  </body>
+</html>

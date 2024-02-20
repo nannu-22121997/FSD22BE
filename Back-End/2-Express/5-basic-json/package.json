@@ -1,0 +1,22 @@
+{
+  "name": "5-basic-json",
+  "version": "1.0.0",
+  "description": "This is to demo how to send json as response to the client",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "json",
+    "response"
+  ],
+  "author": "Naveenkumar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3"
+  }
+}

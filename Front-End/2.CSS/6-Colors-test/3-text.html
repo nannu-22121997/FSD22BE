@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <meta name="Description" content="Text formatting properties">
+    <title>Text formatting properties</title>
+    <style>
+        p {
+            /* font-family : specify the font to be used for displaying the comntent */
+            font-family: 'Courier New', Courier, monospace;
+            /* font-size : specify the sizeof the font. Default unit is 'px'*/
+            font-size: 20px;
+            line-height: 2em;
+            word-spacing: 1em;
+            letter-spacing: 0.2em;
+            text-align: left;/* left, right, center, justify */
+
+            font-style: italic; /* Normal, italic, oblique */
+            font-weight: bold; /* bold, light, medium */
+            text-transform: uppercase; /* uppercase, lowercase, capitalize */
+            text-decoration: underline; /* underline, line-through, overline */
+
+            text-indent: 50px;
+            text-shadow: 1px 1px 1px brown;
+        }
+
+        p::first-letter {
+              font-size: 200%;
+        }
+        p::first-line {
+              text-shadow: none;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Text formatting properties</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi ipsam facere doloribus, eligendi, voluptas odio beatae nisi distinctio mollitia quibusdam laboriosam fuga natus deserunt maiores cum quisquam? Voluptas, cumque deleniti!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat accusamus minus ut! Repellat non architecto fugiat eveniet consequatur. Amet a nostrum magni modi nesciunt aspernatur beatae. Animi nihil dolor quam?</p>
+</body>
+</html>

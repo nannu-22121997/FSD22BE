@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Objects" />
+    <title>JavaScript - Objects</title>
+  </head>
+  <script>
+    // Objects
+    // Non - Primitive datatype => store more than one data in a single variable
+    // 1. key or propert
+    // 2. Value or property Value
+    // 3. properties (Combination of both key and Value)
+    // Data are stored in key : value paris or propertyName : propertyValue
+    /*
+     Syntax
+     let objectName = {
+         propertyName-1 (key) : propertyValue-1 (value),
+         propertyName-2 : propertyValue-2,
+                        .
+                        .
+                        .
+         propertyName-N : propertyValue-N,
+     }
+
+     key or propertyName must be a type of "String"
+     Value or propertyValue can be of any data type (primitive or Non-primitive)
+     */
+
+    // Representation of an object
+    // let user = {
+    //   firstName: "John",
+    //   lastName: "Jack",
+    //   age: 30,
+    //   isAdmin: true,
+    // };
+    // Display all the properties of an object
+    // console.log(user);
+
+    // Accessing Object properties using '.' (dot) operator
+    // Syntax
+    // objectName.propertyName or objectName.key
+    // console.log(user.firstName);
+    // console.log(user.lastName);
+    // console.log(user.age);
+    // console.log(user.isAdmin);
+
+    // Accessing Object properties using '[]' (square Bracket)
+    // Syntax
+    // objectName["propertyName"] or objectName["key"]
+    // console.log(user["firstName"]);
+    // console.log(user["lastName"]);
+    // console.log(user["age"]);
+    // console.log(user["isAdmin"]);
+
+    // Name the object propertyName
+    // 1. lowercase
+    // 2. multi-words => camelCase notation
+    // Ex: first namme => firstName (first letter of the second and following words must be in uppercase)
+
+    // Add a new property
+    // Syntax
+    // objectName.newpropertyName = propertyValue
+    // user.designation = "Full stack developer";
+    // user["zipcode"] = 500004;
+    // console.log(user);
+
+    // Modify the propertyValue of existing property
+    // user.firstName = "Robert";
+    // user["isAdmin"] = false;
+    // console.log(user);
+
+    // delete a exiting property
+    // Syntax
+    // delete objectName.propertyNmae
+
+    // delete user.zipcode;
+    // delete user["isAdmin"];
+    // console.log(user);
+
+    // Different methods of accessing object properties
+    // Ex:1
+    // let user = {
+    //   firstName: "John",
+    //   age: 30,
+    //   isAdmin: true,
+    // };
+    // let key = prompt("What do you know about the  user?", "firstName");
+    // // console.log(key);
+    // console.log(user[key]); // user["firstName"]
+
+    // console.log(user.key);
+
+    // Ex:2
+    // let subject = prompt("Which is your favorite subject", "maths");
+    // let subjects = {
+    //   [subject]: 60, // subjects["maths"] = 60
+    // };
+    // console.log(subjects.maths); // 60
+
+    // Shorthand property
+    // function createUser(firstName, lastName, age, isAdmin) {
+    //   // return `FirstName: ${firstName}, LastName: ${lastName}, Age: ${age}, IsAdmin: ${isAdmin}`;
+    //   return {
+    //     name1: firstName, // firstName : "John"
+    //     name2: lastName, // lastName : "Jack"
+    //     year: age, // age : 25
+    //     adminOrNot: isAdmin, // isAdmin : true
+    //   };
+    // }
+    // let user = createUser("John", "Jack", 25, true); // let user = {firstName : "John", lastName : "Jack", age : 25, isAdmin : true}
+    // console.log(user); // {firstName : 'John', lastName : 'Jack', age : 25, isAdmin : true}
+    // console.log(user.name1); // John
+
+    // function createUser(firstName, lastName, age, isAdmin) {
+    //   return {
+    //     // propertyName: propertyValue = > same =>only the prop
+    //     firstName,
+    //     lastName,
+    //     age,
+    //     isAdmin,
+    //     designation: "Full-Stack developer",
+    //   };
+    // }
+    // let user = createUser("John", "Jack", 25, true);
+    // console.log(user);
+    // console.log(user.firstName);
+
+    // property Names limitation
+    // Object => we can use any keyword/reserved words as propertyName
+    // Numbers can be converted into string if it is used as propertyName
+    // let obj = {
+    //   for: 20,
+    //   if: "Hello",
+    //   else: "world",
+    //   1: "John",
+    // };
+    // console.log(obj);
+    // console.log(obj["1"]); // John
+    // console.log(obj[1]); // John
+
+    // property existance test
+    // "in" operator
+    // "key" in objectName => true/false
+    // console.log("for" in obj); // true
+    // console.log("firstName" in obj); // false
+
+    // let key = "for";
+    // console.log(key in obj); // true
+
+    // for ... in loop
+    // Syntax
+    /*
+     for (key in object) {
+       // iterate each and every property of an object
+     }
+     */
+    let user = {
+      firstName: "John",
+      lastName: "Jack",
+      age: 25,
+      isAdmin: true,
+      designation: "Tester",
+    };
+    for (const prop in user) {
+      // const prop = "firstName"
+      // Accessing object propertyName
+      // console.log(prop); // firstName
+      // Accessing object propertyValue
+      // console.log(user[prop]); // user["firstName"] => "John"
+      console.log(`${prop} : ${user[prop]}`);
+    }
+  </script>
+  <body>
+    <h2>JavaScript - Objects</h2>
+  </body>
+</html>

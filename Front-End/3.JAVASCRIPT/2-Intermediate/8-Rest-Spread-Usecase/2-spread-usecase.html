@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Spread Usecase" />
+    <title>JavaScript - Spread Usecase</title>
+  </head>
+  <script>
+    // JavaScript - Spread Usecase
+    // Spread in Array Literal
+    // copy the element one array into an another array
+    // const user1 = ["Jack", 30, "true"];
+    // const user2 = ["John", "Tester", ...user1];
+    // console.log(user2);
+
+    // String to Array of characters
+    // let message = "Hello, World!!!";
+    // console.log([...message]);
+
+    // Spread in function
+    // Ex-1
+    // const num = [1, 2, 3, 4];
+    // function addNumbers(a, b, c, d) {
+    //   // a = "1,2,3,4" b = undefined c = undefined d = undefined
+    //   return a + b + c + d; // 1,2,3,4undefinedundefinedundefined
+    // }
+    // console.log(...num); // 1 2 3 4
+    // console.log(addNumbers(num)); // 1,2,3,4undefinedundefinedundefined
+    // console.log(addNumbers(...num)); // 10
+
+    // Ex-2
+    // let fullName = "John Jack";
+    // function displayName(a, b, c) {
+    //   // a = J, b = o, c = h
+    //   return a + b + c;
+    // }
+    // console.log(...fullName); // J o h n   J a c k
+    // console.log(displayName(...fullName)); // Joh
+
+    // console.log([...fullName]); // ['J', 'o', 'h', 'n', ' ', 'J', 'a', 'c', 'k']
+    // console.log(displayName([...fullName])); // J,o,h,n, ,J,a,c,kundefinedundefined
+
+    // console.log(...fullName); // J o h n   J a c k
+    // console.log(displayName(...fullName[3])); // nundefinedundefined
+
+    // Spread in Object Literals
+    // let fullName = ["John", "Jack"];
+    // let userDetails = {
+    //   ...fullName,
+    //   age: 30,
+    //   isAdmin: true,
+    //   designation: "Full-stack Developer",
+    // };
+    // console.log(userDetails);
+
+    // Clone the properties of one object to another object
+    // let obj1 = {
+    //   name: "John",
+    //   age: 30,
+    // };
+    // let obj2 = {
+    //   ...obj1,
+    //   isAdmin: false,
+    //   designation: "Tester",
+    // };
+    // console.log(obj2);
+
+    // Spread operator does not clone the identical or similar or same properties
+    // let obj1 = {
+    //   name: "John",
+    //   age: 20,
+    // };
+    // let obj2 = {
+    //   ...obj1,
+    //   age: 35,
+    //   isAdmin: false,
+    //   designation: "Tester",
+    // };
+    // console.log(obj2);
+
+    // Spread in objects containing non-primitives
+    // const userJohn = ["John", 30, true];
+    // let userJack = ["Jack", ...userJohn];
+    // console.log(userJack); // ['Jack', 'John', 30, true]
+    // userJohn.push("Tester");
+    // console.log(userJohn); // ['John', 30, true, 'Tester']
+    // console.log(userJack); // ['Jack', 'John', 30, true]
+
+    let userJohn = {
+      firstName: "Jack",
+      age: 30,
+      isAdmin: true,
+    };
+    let userJack = {
+      lastName: "Jack",
+      ...userJohn,
+    };
+    console.log(userJack);
+    userJohn.address = {
+      street: "abc",
+      city: "Bangalore",
+    };
+    let userRobert = { ...userJohn };
+    userRobert.address = { ...userJohn.address, pincode: 500004 };
+    console.log(userJohn);
+    console.log(userJack);
+    console.log(userRobert);
+    // Makes the element as an iterable elements
+  </script>
+  <body>
+    <h2>JavaScript - Spread Usecase</h2>
+  </body>
+</html>

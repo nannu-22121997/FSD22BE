@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <meta name="Description" content="JavaScript - Arrays">
+    <title>JavaScript - Arrays</title>
+    <script>
+        // Arrays
+        // Syntax
+        // let varName = ["John", "Jack", "Hary", "Robert"]; // 4 elements/items => can be accessed by the index
+        // index starts frm 0
+        //                   0       1       2       3                                     
+        // Accessing array element/items
+        // syntax
+        // varName[0] => John
+        // varName[3] => Robert
+        // varName[4] => undefined
+        let user =["John", "Jack", "Hary", "Robert"];
+        console.log(user);
+        console.log(user,length); // 4
+        // let name = prompt('Enter any name:');
+        // console.log(name);
+
+        // Add elements to an array
+        // syntax
+        // varName[index] = "somevalue";
+        user[4] = "SkillSafari"; // added new element
+        console.log(user);
+        user[2] = "Edukey"; // modified/updated existing element
+        console.log(user); 
+
+        // mix the data 
+        let studentDetails = [
+            "jack",
+            "John",
+            25, 
+            "CSE",
+            false,
+            { address:"xyz", pincode: 500004 },
+            ];
+        console.log(studentDetails[2], studentDetails[3]);
+        console.log(studentDetails[4]); //false
+        console.log(studentDetails[5]); // { address:"xyz", pincode: 500004 }
+        // let studentDetails[5] = { address:"xyz", pincode: 500004 }
+        console.log(studentDetails[5].address);
+        console.log(studentDetails[5].pincode);
+        console.log(studentDetails.length); // 6
+        console.log(studentDetails[studentDetails.length - 1]);
+        
+        // pop/push and shift/unshift
+        // push => add a new element at the end of an array
+        // pop => remove the last  element from an array
+        let fruit =  ["Apple"];
+        console.log(fruit);
+        // Syntax
+        // arrayName.push(element1, element2, ....., element-n);
+        fruit.push("Orange", "Grapes");
+        console.log(fruit);
+
+        // Syntax
+        // arrayName.push();
+        let removedElement = fruit.pop();
+        console.log(removedElement);
+
+        // unshift => add a new element in the beginning of an array
+        // shift => remove the first element from the array
+        let mobiles =["samgung", "Mi", "Apple"];
+        console.log(mobiles);
+        mobiles.unshift("oppo", "Realme", "vivo");
+        console.log(mobiles);
+        let shiftElement = mobiles.shift();
+        console.log(shiftElement);
+    </script>
+</head>
+        
+<body>
+    <h2>JavaScript - Arrays</h2>
+    <p>Collation: We can able to add any data type data based on index</p>
+</body>
+</html>

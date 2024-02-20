@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Object references and copying" />
+    <title>Object references and copying</title>
+  </head>
+  <script>
+    // Object references and copying
+
+    // Variables - Copy by value
+    // let firstName = "John";
+    // let lastName = firstName; // copying the value of "firstName" to "lastName"
+    // console.log(firstName); // John
+    // console.log(lastName); // John
+    // lastName = "Robert";
+    // console.log(lastName); // Robert
+    // console.log(firstName); // John
+
+    // Object - copy by reference
+    // let user1 = {
+    //   firstName: "John",
+    //   lastName: "Jack",
+    // };
+    // let user2 = user1;
+    // console.log(user1);
+    // console.log(user2);
+    // user2.age = 25;
+    // user2.isAdmin = true;
+    // user1.department = "IT";
+    // console.log(user1);
+    // console.log(user2);
+
+    // Ex: 1
+    // let a = {};
+    // let b = a;
+    // console.log(a);
+    // console.log(b);
+    // console.log(a == b); // true // boyh the variables reference the same object
+    // console.log(a === b); // true
+
+    // let a = {};
+    // let b = {};
+    // console.log(a); // {}
+    // console.log(b); // {}
+    // console.log(a == b); // false //  two independent objects
+    // console.log(a === b); // false
+
+    // Cloning and merging
+    // Object.assign()
+
+    // let user = {
+    //   firstName: "John",
+    //   lastName: "Jack",
+    //   hobbies: ["cricket", "football"],
+    //   address: {
+    //     street: "abc",
+    //     city: "xyz",
+    //     zipcode: 500004,
+    //   },
+    // };
+
+    // let clonedUser = {};
+    // for (const key in user) {
+    //   //   console.log(key);
+    //   clonedUser[key] = user[key]; // clonedUser["firstName"] = user["firstName"] => firstName : "John"
+    // }
+    // clonedUser.age = 30;
+    // console.log(user);
+    // console.log(clonedUser);
+
+    // object.assign() - colinic
+    // Syntax
+    // object.assign(designationObject, src-1, src-2,......, src-N)
+    let userName = {
+      firstName: "John",
+      lastName: "Jack",
+    };
+    let userAddress = {
+      street: "abc",
+      city: "xyz",
+      zipcode: 500004,
+    };
+
+    console.log(userName);
+    console.log(userAddress);
+    let user = {};
+    console.log(user);
+    Object.assign(user, userName, userAddress, {
+      age: 30,
+      designation: "Tester",
+    });
+    console.log(user);
+
+    // Nested Cloning
+    let userDetails = {
+      firstName: "John",
+      lastName: "Jack",
+      address: {
+        street: "abc",
+        city: "xyz",
+        zipcode: 500004,
+      },
+    };
+
+    let newUser = {
+      id: 10001,
+    };
+    Object.assign(newUser, userDetails, { age: 25 });
+    console.log(newUser);
+
+    // Ex:2
+    let fruits = {
+      apple: 10,
+      oramge: 30,
+      mango: 50,
+    };
+    // let copiedObj = {};
+    let copiedObject = Object.assign({ number: 123 }, fruits);
+    console.log(copiedObject);
+
+    // const object can be modified
+    // variable : const name = "Jack"
+    // const name = "John";
+    // name = "Jack";
+    // console.log(name);
+    const mobile = {
+      nokia: 250,
+      samsung: 300,
+      vivo: 500,
+    };
+    mobile.vivo = 800;
+    mobile.realme = 200;
+    console.log(mobile);
+  </script>
+  <body>
+    <h2>Object references and copying</h2>
+  </body>
+</html>

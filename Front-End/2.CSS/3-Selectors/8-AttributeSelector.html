@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Attribute Selector">
+    <title>Attribute Selector</title>
+    <style>
+      /*
+      selector[attribute] {
+        propertyName-1: propertyValue-1;
+      }
+      selector[attributeName^="s"] => selects the attribute value starts with 's'
+      selector[attributeName*="col"] => selects the attribute value has 'col' in it
+      selector[attributeName$="e"] => selects the attribute value end with 'e' 
+      */
+
+      /*
+      p[class=sample] {
+        color: red;
+        font-weight: bold;
+      }
+      */
+
+     /*
+      p[class=sample] {
+        color: red;
+        font-weight: bold;
+      }
+      */
+
+      /*
+      p[class^="sam"] {
+        color: red;
+      }
+      */
+
+      /*
+      p[class*="m"] {
+        color: red;
+      }
+      */
+
+     /*
+      .simple[class$="le"] {
+        color: red;
+      }
+      */ 
+
+      /*
+       p[class$="le"] {
+        color: red;
+      }
+      */
+    </style>
+</head>
+<body>
+    <h1>Attribute Selector</h1>
+    <p class="sample">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo a repudiandae eveniet inventore quia cum! Beatae cum nulla aliquam adipisci itaque quod sequi! Perspiciatis autem nam harum molestiae, commodi ea.</p>
+    <hr>
+    <p class="color-blue">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi nobis veniam animi eos necessitatibus dolore sit vero asperiores nemo voluptatibus accusantium dolorum omnis voluptates ullam, ab nihil nisi veritatis labore?</p>
+    <hr>
+    <p class="color-red">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa laudantium culpa quis expedita exercitationem magni odit error eveniet consectetur, molestiae velit cumque maxime harum minima quae. Ab omnis eaque perspiciatis.</p>
+    <hr>
+    <p class="color-green">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit distinctio illo enim officiis nihil debitis magnam nesciunt quasi atque dolore, eos minima autem est aliquam quia ipsa iure dicta nisi?</p>
+    <hr>
+    <p class="simple" id="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat molestiae neque id quos delectus ullam, voluptate voluptas qui, repudiandae est odio assumenda ab! Hic nulla magni doloremque beatae magnam! Laudantium?</p>
+</body>
+</html>

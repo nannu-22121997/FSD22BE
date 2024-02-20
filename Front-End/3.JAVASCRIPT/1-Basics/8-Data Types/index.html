@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <meta name="Description" content="JavaScript - DataTypes">
+    <title>JavaScript - DataTypes</title>
+    <script>
+        // DataTypes - primitive (one variable - one value) and non-primitive (one variable - Multiple Values)
+        // primitive - String, Number, Boolean, Null, Undefined, BigInt
+        // Non-Primitive - Object and Symbol
+        // Primitive
+        // String => Alphabetic letters / Enclosed by single double quote
+        let firstName = "Skillsafari";
+        console.log(firstName);
+
+        // Number => Whole number, decimal number
+        let number1 = 20;
+        number2 = 25.68;
+        console.log(number1, number2);
+
+        // Boolean => true, false
+        let isAdmin = true;
+        console.log(isAdmin);
+
+        // Null => defining a variable with dummy value, which  can be modified later
+        let lastName =  null;
+        console.log(lastName);
+
+        //Undefined => Variables without value are treated as undefined
+        let pincode;
+        console.log(pincode);
+
+        // Object
+        let user = {
+            // Key : value pair => properties
+            // PropertyName : PropertyValue => property
+            firstName: "SkillSafari",
+            lastName: "Edukeys",
+            pincode: "500004",
+            isAdmin: true,
+            address: null,
+        };
+        console.log(user);
+        document.write(user);
+        // alert(user)
+        // Accessing the object properties by '.' (dot) operator
+        // syntax
+        // objectName.propertyName
+        // User.firstName => SkillSafari
+        // User.lastName => Edukeys
+        // user.pincode => 500004
+        // user.isAdmin => true
+        // User.address => null
+        console.log(user.first);
+        console.log(user.lastName);
+        console.log(user.pincode);
+        console.log(user.isAdmin);
+        console.log(user.address);
+        // Access the properties of an object by using '[]' (square-bracket) method
+        // Syntax
+        // objectName["propertyName"]
+        console.log(user["firstName"]); //skillSafari
+
+        // typeof => check the type of data which we are using
+        console.log(typeof firstName); //string
+        console.log(typeof number1);  // number
+        console.log(typeof isAdmin);  // boolean
+        console.log(typeof lastName); // object
+        console.log(typeof pincode);  // undefined
+        console.log(typeof user); // object
+    </script>
+</head>
+<body>
+    <h2>JavaScript - DataTypes</h2>
+</body>
+</html>

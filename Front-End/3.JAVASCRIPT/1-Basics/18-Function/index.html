@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="JavaScript - Functions" />
+    <title>JavaScript - Functions</title>
+  </head>
+  <script>
+    // JavaScript - Functions
+    // "Building block" of the progran
+    // Allow the code to be called many times without repetation
+
+    // alert(), prompt(), confirm(), console.log()
+
+    // Function Declaration
+    // syntax
+    /*
+    function functionName (parameter-1,parameter-2,.......parameter-N) {
+        // function body
+        // statement
+        // expression
+    }
+    */
+    // calling the function
+    // Syntax
+    // functionName(parameterValue-1,parameterValue-2,.....parameterValue-N);
+
+    // let num = 10;
+    // for (let val = 0; val <= num; val++) {
+    //   console.log(val);
+    // }
+
+    // if (10 > 5) {
+    //   console.log("Number-1 is Greater");
+    // } else {
+    //   console.log("Number-2 is Greater");
+    // }
+
+    // Function Declaration
+    // function displayMessage() {
+    //   console.log("Welcome to the Function");
+    //   let num1 = 10,
+    //     num2 = 20;
+    //   console.log("The SUM is:" + (num1 + num2));
+    // }
+
+    // // Call the function
+    // displayMessage();
+    // displayMessage();
+
+    // console.log("Welcome to the Function");
+    // let num1 = 10,
+    //   num2 = 20;
+    // console.log("The SUM is:" + (num1 + num2));
+    // console.log("Welcome to the Function");
+    // let num3 = 10,
+    //   num4 = 20;
+    // console.log("The SUM is:" + (num3 + num4));
+    // console.log("Welcome to the Function");
+    // let num5 = 10,
+    //   num6 = 20;
+    // console.log("The SUM is:" + (num5 + num6));
+
+    // Local Variable
+    // function displayMessage() {
+    //   let message = "Hello, I an function"; // locally available only inside the function body
+    //   console.log(mesage);
+    // }
+    // displayMessage();
+    // console.log(message); // Error
+
+    // Outer variables
+    // let firstName = "SkillSafari";
+    // function displayMessage() {
+    //   let name = firstName + " Edukeys"; // SkillSafari Edukeys
+    //   let lastName = "John";
+    //   console.log(name);
+    // }
+    // displayMessage();
+    // console.log(firstName);
+    // console.log(name);
+    // console.log(lastName);
+
+    // let firstName = "John";
+    // function displayMessage() {
+    //   let lastName = "Jack";
+    //   // firstName = "SkillSafari";
+    //   let firstName = "SkillSafari";
+    //   console.log(firstName, lastName); // SkillSafari Jack
+    // }
+    // displayMessage();
+    // console.log(firstName); // John
+
+    // parameters
+    // function displayName(firstName, lastName) {
+    //   console.log(firstName, lastName);
+    // }
+    // displayName("SkillSafari", "Edukeys");
+    // displayName("John", "Jack");
+
+    // function displayMessage(firstName, lastName) {
+    //   // firstName="John", lastname="Jack"
+    //   firstName = "Mary";
+    //   lastName = "Robert";
+    //   console.log(firstName, lastName);
+    // }
+    // let name1 = "John";
+    // let name2 = "Jack";
+    // displayMessage(name1, name2);
+
+    // function sum(num1, num2) {
+    //   console.log(num1 + num2);
+    // }
+    // sum(10, 2);
+    // sum(20, 86);
+
+    // Default values
+    // function displayName(firstName, lastName = "Robert") {
+    //   console.log(firstName, lastName);
+    // }
+    // displayName("John");
+    // displayName("Jack");
+    // displayName("Mary");
+    // displayName("Johnson", "Jack");
+
+    // Returning a value
+    // function sum(a, b) {
+    //   // console.log(a + b);
+    //   // let c = a + b;
+    //   return c; // 5
+    // }
+    // let result = sum(2, 3); // 5
+    // console, log(result);
+
+    // function displayName(firstName, lastName) {
+    //   let name = firstName + lastName;
+    //   //   return name;
+    //   //  return 3;
+    //   console.log("will i display");
+    // }
+    // let output = displayName("John", "Jack");
+    // console.log(output);
+
+    function OddEven(num) {
+      //  num = 9
+      if (num % 2 == 0) {
+        // 9 % 2 => 1
+        return "Even";
+      } else {
+        return "Odd";
+      }
+    }
+    let result = OddEven(10);
+    console.log(result);
+  </script>
+  <body>
+    <h2>JavaScript - Functions</h2>
+  </body>
+</html>

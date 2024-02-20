@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="Description" content="Fetch API" />
+  <title>Fetch API</title>
+</head>
+
+<body>
+  <h2>Fetch API</h2>
+  <div id="user"></div>
+
+  <script>
+    // Fetch API
+    // It is introduced to simplify the AJAX (Asynchronous JavaScript and XML) calls wwith JavaScript
+    // Asynchronous => we can use fetch to make a call to external API without halting the execution of other introductions
+    /*
+      fetch(url).then().then()
+      // text, json, html etc...
+      // url => web URL or path of a file
+
+      fetch() => get the data from the server/third party application
+              => post the data to the server/third party application
+    */
+
+    // GET METHODS
+    // fetching data locally -text()
+    // fetch("./sample.txt") // url => local path
+    //   .then((res) => res.text()) // define the datatype methods : text(), json(), formData(), blob()
+    //   .then((data) => console.log(data))
+    //   .catch((err) => console.log(`${err} - Something went worng...`))
+
+    // fetch("./sample.txt")
+    //   .then((res) => res.text())
+    //   .then((data) => console.log(data));
+
+    // // Fetch data locally - json()
+    // fetch('./sample.json')
+    //   .then((res) => res.json())
+    //   .then((data) => console.log(data));
+
+    // Fetch the data from third party server
+    // fetch("https://jsonplaceholder.typicode.com/users")
+    //   .then((res) => res.json())
+    //   .then((data) => console.log(data));
+
+    // Fetch data using Async/Await
+    async function getUsers(url) {
+      try {
+        const res = await fetch(url); // fetch(url).then(res => res.json())
+        const users = await res.json(); // then(data => console.log(data))
+        const userDiv = document.querySelector("#user");
+
+        userData = users.map(
+          (user) => `
+        <h1>User: ${user.name}</h1>
+        <h2>Username: ${user.username}</h2>
+        <h3>E-mail: ${user.email}</h3>
+        <p>Phone No: ${user.phone}</p>
+        <hr>
+        `
+        )
+          .join(" ");
+        userDiv.innerHTML = userData;
+      } catch (error) {
+        console.log(`Error Message: ${error}`);
+      }
+    }
+    getUsers("https://jsonplaceholder.typicode.com/users");
+
+    // POST METHODS
+    // fetch(url, options)
+    // url => web url / local path
+    // options => method : POST, headers : Content-Type, body : data
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM - Creating Dynamic Radio Buttons" />
+    <title>DOM - Creating Dynamic Radio Buttons</title>
+  </head>
+  <body>
+    <h2>DOM - Creating Dynamic Radio Buttons</h2>
+    <h2>DOM - Handling Radio Buttons</h2>
+    <p>Select your favorite colour</p>
+    <form action="#" method="post" id="form">
+      <p>
+        <button id="btn">Show selected colour</button>
+      </p>
+    </form>
+    <p id="output"></p>
+  </body>
+  <script>
+    // DOM - Creating Dynamic Radio Buttons
+    const colours = ["Red", "Green", "Blue", "Yellow", "Orange"];
+    const form = document.querySelector("#form");
+    form.innerHTML = colours
+      .map(
+        (colour) => `
+    <div>
+        <input type="radio" name="colour" value=${colour} id=${colour}>
+        <label for=${colour}>${colour}</label>
+    </div>
+    `
+      )
+      .join(" "); // [ <div></div>, <div></div>, <div></div>, <div></div>, <div></div> ] => " <div></div>, <div></div>, <div></div>, <div></div>, <div></div>"
+
+    // "change" eventType
+    const radioButtons = document.querySelectorAll("input[name='colour']");
+    console.log(radioButtons);
+    for (const radioButton of radioButtons) {
+      radioButton.addEventListener("change", showSelectedColor);
+    }
+    function showSelectedColor(e) {
+      console.log(e);
+      if (this.checked) {
+        document.querySelector(
+          "#output"
+        ).innerHTML = `you selected: ${this.value}`;
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Selecting elements in the DOM" />
+    <title>Selecting elements in the DOM</title>
+  </head>
+  <body>
+    <h2>Selecting elements in the DOM</h2>
+    <!-- // How to selecting the elements in the DOM
+      // select element by ID - getElementById('id')
+      // document.getElenentById("id")
+
+      // select element by Class Name - getElementsByClassName('className')
+      // document.getElementByClassName("className") - return HTMLCollectionOf<Element>
+
+      // select element by Tag Name - getElementByTagName('tagName')
+
+      // Select the elements by CSS selectors
+      // querySelector('css selector')
+      // querySelectorAll('css selector') -->
+    <!-- <p id="para">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, Laborum.
+    </p>
+
+    <a href="http://www.skillsafari.in" id="link" target="_blank">Click</a> -->
+
+    <!-- let a = {
+       defaultKey: defaultValue,
+        .
+        . 
+        . 
+        href: "http://www.skillsafari.in",
+        id:"link",
+        target:"_blank"
+     } -->
+
+    <!-- <ul>
+      <li class="nav-items">Home</li>
+      <li class="nav-items">About</li>
+      <li class="nav-items">Skills</li>
+      <li class="nav-items">Portfolio</li>
+      <li class="nav-items">Contact</li>
+    </ul> -->
+
+    <!-- <h1>Heading</h1>
+    <h1>This is another heading</h1>
+    <p>THis is a paragraph</p>
+    <p>THis is another paragraph</p> -->
+
+    <!-- class="para>  -->
+    <!-- <p id="para">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+      accusantium laudantium doloribus porro nulla cum reprehenderit quibusdam,
+      nostrum molestiae? Perspiciatis a, culpa cumque praesentium qui cupiditate
+      odit ut facilis nulla.
+    </p> -->
+
+    <ul>
+      <li class="nav-items">Home</li>
+      <li class="nav-items">About</li>
+      <li class="nav-items">Skills</li>
+      <li class="nav-items">Portfolio</li>
+      <li class="nav-items">Contact</li>
+    </ul>
+
+    <script>
+      // select element by ID - getElementById('id') - return HTML Element
+      // document.getElenentById("id")
+
+      // const paraEle = document.getElementById("para");
+      // console.log(paraEle);
+
+      // const link = document.getElementById("link");
+      // console.log(link);
+
+      // Select element by className
+      // const navItems = document.getElementsByClassName("nav-items");
+      // Convert HTML Collection to Array-like elements
+      // Array.from(HTML Collection) => Array-like shadow elements
+      // console.log(navItems);
+      // const arrayFrom = Array.from(navItems);
+      // const navText = arrayFrom.map((navItem) => navItem.innerHTML);
+      // console.log(navText);
+
+      // Select DOM elements by TagName
+      // document.getElementsTagName('tag') // return HTML Collection of HTML Object
+      // const h1Element = document.getElementsByTagName("h1");
+      // h1Elements[0].innerHTML = "Modified Heading";
+      // console.log(h1Element[0]);
+
+      // Select Dom element with CSS Selectors
+      // 1. document.querySelector('cssSelector')
+
+      // const para = document.querySelector("#para"); // .Spara
+      // console.log(para);
+
+      // 2. document.querySelectorAll("cssSelector") // return NodeList of elements
+      const list = document.querySelectorAll(".nav-items");
+      console.log(list);
+    </script>
+  </body>
+</html>
